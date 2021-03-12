@@ -93,8 +93,23 @@ class UKF {
   // Augmented state dimension
   int n_aug_;
 
+  // Number of sigma points
+  int n_sig_;
+
   // Sigma point spreading parameter
   double lambda_;
+
+  // Laser covariance matrix
+  Eigen::MatrixXd las_cov_;
+
+  // Radar covariance matrix
+  Eigen::MatrixXd rad_cov_;
+
+  // NIS for laser
+  double NIS_laser_;
+
+  // NIS for radar
+  double NIS_radar_;
 };
 
 #endif  // UKF_H
